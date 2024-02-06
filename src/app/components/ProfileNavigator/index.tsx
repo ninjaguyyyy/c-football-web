@@ -1,10 +1,20 @@
-﻿import Link from 'next/link';
+﻿import ProfileNavigatorItemComp from 'app/components/ProfileNavigator/ProfileNavigatorItemComp';
+import { ProfileNavigatorItem } from 'constants/menu';
 
-export default function ProfileNavigator() {
+type Props = {
+  items: ProfileNavigatorItem[];
+  pathname: string;
+};
+
+export default function ProfileNavigator({ items, pathname }: Props) {
   return (
-    <div className="w-full mt-2">
-      <Link href="/games">Games</Link>
-      <Link href="/members">Members</Link>
+    <div className="w-full my-4 bg-white flex items-center gap-6 rounded-xl px-4 font-bold box-border">
+      {items.map((item) => {
+        const href = pathname + item.link;
+        return (
+          <ProfileNavigatorItemComp item={item} href={href} key={item.label} />
+        );
+      })}
     </div>
   );
 }
