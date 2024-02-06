@@ -1,0 +1,25 @@
+﻿.sidebar {
+  list-style: none;
+
+  :global {
+    .active {
+      @apply bg-lightblue text-white;
+
+      span,
+      svg {
+        @apply text-white;
+      }
+    }
+
+    a {
+      &:not(.active):hover {
+        box-shadow: 3px 5px 20px 0 rgba(94, 92, 154, 0.12);
+        @apply text-lightblue;
+
+        svg {
+          @apply text-lightblue;
+        }
+      }
+    }
+  }
+}
