@@ -23,6 +23,11 @@ const config: Config = {
 
         purple: '#615dfa',
         gray: '#adafca',
+        'gray-1': '#f5f5f5',
+        'gray-2': '#707070',
+        'gray-3': '#6a696c',
+        'gray-4': '#8f91ac',
+
         lightblue: '#23d2e2',
 
         dark: '#3e3f5e',

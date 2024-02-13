@@ -1,5 +1,11 @@
 ﻿import { IconType } from 'react-icons';
-import { GiAbstract045, GiShop, GiNewspaper, GiGamepad, GiHighKick } from 'react-icons/gi';
+import {
+  GiAbstract045,
+  GiShop,
+  GiNewspaper,
+  GiGamepad,
+  GiHighKick,
+} from 'react-icons/gi';
 
 export interface SidebarItem {
   icon: IconType;
@@ -26,7 +32,7 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
 ];
 
 export const PROFILE_NAVIGATOR_ITEMS: ProfileNavigatorItem[] = [
-  { icon: GiGamepad, label: 'Games', link: '/games' },
+  { icon: GiGamepad, label: 'Matches', link: '/matches' },
   {
     icon: GiHighKick,
     label: 'Members',

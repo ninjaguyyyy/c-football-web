@@ -1,9 +1,10 @@
-﻿import ProfileHeader from 'app/components/ProfileHeader';
+﻿'use client';
+
+import ProfileHeader from 'app/components/ProfileHeader';
 import ProfileNavigator from 'app/components/ProfileNavigator';
 import { PROFILE_NAVIGATOR_ITEMS } from 'constants/menu';
 
 export default function Layout({ children, params }: any) {
-  console.log({ params });
   return (
     <div className="w-full">
       <ProfileHeader />
