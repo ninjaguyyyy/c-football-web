@@ -1,4 +1,5 @@
 ﻿import { Col, Row } from 'antd';
+import CreateMatchArea from 'app/teams/[teamHashId]/matches/components/CreateMatchArea';
 import MatchResult from 'app/teams/[teamHashId]/matches/components/MatchResult';
 import MatchTexture from 'app/teams/[teamHashId]/matches/components/MatchTexture';
 
@@ -25,16 +26,18 @@ export default function TeamGames() {
       </Col>
 
       <Col span={7}>
+        <CreateMatchArea />
+
         <div className="bg-white p-6 rounded-xl">
           <p className="font-bold text-base mt-0">Group Info</p>
           <div>
             <div className="flex font-medium text-sm mb-2">
-              <span className="basis-[100px] text-gray-4">Created</span>
+              <span className="basis-[70px] text-gray-4">Created</span>
               <span className="flex-1">September 25, 2020</span>
             </div>
 
             <div className="flex font-medium text-sm">
-              <span className="basis-[100px] text-gray-4">Type</span>
+              <span className="basis-[70px] text-gray-4">Type</span>
               <span className="flex-1">Public</span>
             </div>
           </div>

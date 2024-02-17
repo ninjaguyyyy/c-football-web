@@ -22,11 +22,15 @@ const config: Config = {
         'dust-red-5': '#ff4d4f',
 
         purple: '#615dfa',
+        'purple-1': '#5753e4',
         gray: '#adafca',
         'gray-1': '#f5f5f5',
         'gray-2': '#707070',
         'gray-3': '#6a696c',
         'gray-4': '#8f91ac',
+        'gray-5': '#eaeaf5',
+        'gray-6': '#fcfcfd',
+        'gray-7': '#c5bdbd',
 
         lightblue: '#23d2e2',
 

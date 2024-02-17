@@ -1,4 +1,5 @@
 ﻿import Avatar from 'app/components/Avatar';
+import SettingButton from 'app/components/ProfileHeader/SettingButton';
 import Image from 'next/image';
 
 import TeamImg from 'statics/images/profile-header.jpeg';
@@ -12,7 +13,7 @@ export default function ProfileHeader() {
         src={TeamImg}
         alt="header-cover"
       />
-      <div className="h-[125px] w-full px-8 box-border">
+      <div className="h-[125px] w-full px-8 box-border flex justify-between items-center">
         {/* Team Avatar */}
         <div className="flex items-center gap-6 translate-y-[-40px]">
           <Avatar />
@@ -21,6 +22,11 @@ export default function ProfileHeader() {
 
         {/* Team Stats */}
         <div></div>
+
+        {/* Settings */}
+        <div>
+          <SettingButton />
+        </div>
       </div>
     </div>
   );
