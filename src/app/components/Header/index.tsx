@@ -4,7 +4,9 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="fixed left-0 right-0 bg-purple h-[80px] px-6 text-white flex items-center z-10">
+    <header
+      className={`fixed left-0 right-0 bg-purple h-[80px] px-6 text-white flex items-center z-10`}
+    >
       <Logo width={40} />
       {/* <InputField
           suffix={<FaSearch className="text-base" />}
@@ -14,13 +16,13 @@ export default function Header() {
         {/* <HeaderMenu /> */}
         <div className="flex gap-12 items-center">
           <Link href="" className="text-white font-bold block">
-            Home
+            <span>Home</span>
           </Link>
           <Link href="" className="text-white font-bold block">
             Blog
           </Link>
           <Link href="" className="text-white font-bold block">
-            Contact Us
+            <span>Contact Us</span>
           </Link>
           {/* <MdOutlineLightMode className="text-[30px] hover:bg-[#edeef0] cursor-pointer xs:hidden" /> */}
           {/* <HiOutlineBell className="text-[25px] hover:bg-[#edeef0] cursor-pointer" /> */}
