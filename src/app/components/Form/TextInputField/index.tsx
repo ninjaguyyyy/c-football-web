@@ -1,13 +1,27 @@
-﻿import { Input } from 'antd';
+﻿import { TextField, TextFieldProps } from '@mui/material';
 import styles from './index.module.scss';
+import { Controller } from 'react-hook-form';
+import { Control } from 'react-hook-form/dist/types/form';
 
-type Props = {};
+type Props = TextFieldProps & {
+  name: string;
+  control: Control<any>;
+  className?: string;
+  defaultValue?: unknown;
+};
 
-export default function TextInputField() {
+export default function TextInputField(props: Props) {
+  const { name, control, defaultValue, ...textFieldProps } = props;
+  const defaultValueInput = defaultValue !== undefined ? defaultValue : '';
+
   return (
-    <Input
-      className={`${styles.container} px-[18px] py-[10px] rounded-xl`}
-      placeholder="Basic usage"
+    <Controller
+      name={name}
+      control={control}
+      defaultValue={defaultValueInput}
+      render={({ field }) => {
+        return <TextField {...textFieldProps} {...field} />;
+      }}
     />
   );
 }
