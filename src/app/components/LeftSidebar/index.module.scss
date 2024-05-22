@@ -1,5 +1,7 @@
 ﻿.sidebar {
-  list-style: none;
+  .list {
+    list-style: none;
+  }
 
   :global {
     .active {

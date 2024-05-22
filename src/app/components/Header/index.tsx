@@ -1,6 +1,7 @@
 ﻿import Logo from 'app/components/Logo';
 import Image from 'next/image';
 import Link from 'next/link';
+import { HiOutlineSquares2X2 } from 'react-icons/hi2';
 
 export default function Header() {
   return (
@@ -14,7 +15,9 @@ export default function Header() {
         /> */}
       <div className="flex items-center gap-[200px] ml-20">
         {/* <HeaderMenu /> */}
+
         <div className="flex gap-12 items-center">
+          <HiOutlineSquares2X2 className="text-2xl cursor-pointer text-[#8b88ff] hover:text-white" />
           <Link href="" className="text-white font-bold block">
             <span>Home</span>
           </Link>
