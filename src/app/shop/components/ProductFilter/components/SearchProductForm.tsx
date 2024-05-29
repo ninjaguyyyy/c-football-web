@@ -15,7 +15,12 @@ export default function SearchProductForm() {
 
   return (
     <form className="flex">
-      <TextInputField name="keyword" control={control} className="w-[300px]" />
+      <TextInputField
+        label="Search Products"
+        name="keyword"
+        control={control}
+        className="w-[300px]"
+      />
       <Button>Search</Button>
     </form>
   );

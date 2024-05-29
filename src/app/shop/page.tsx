@@ -1,24 +1,23 @@
-﻿import Banner from 'app/components/Banner';
+﻿import { Grid } from '@mui/material';
+import Banner from 'app/components/Banner';
 import ProductFilter from 'app/shop/components/ProductFilter';
-import Test1 from 'app/shop/components/Test1';
-import Test2 from 'app/shop/components/Test2';
-import { Suspense } from 'react';
+import ShopMain from 'app/shop/components/ShopMain';
+import ShopSidebar from 'app/shop/components/ShopSidebar';
 
 export default async function Shop() {
   return (
-    <div className="w-full">
+    <div className="max-w-[1184px] w-full">
       <Banner />
-      <ProductFilter className="my-8" />
+      <ProductFilter className="mt-8 mb-4" />
 
-      <section className="mt-2 container mx-auto flex min-h-screen flex-col items-center justify-between bg-white">
-        Shop
-        <Suspense fallback={<div>Loading test 1</div>}>
-          <Test1 />
-        </Suspense>
-        <Suspense fallback={<div>Loading test 2</div>}>
-          <Test2 />
-        </Suspense>
-      </section>
+      <Grid container spacing={2} className="">
+        <Grid item xs={3}>
+          <ShopSidebar />
+        </Grid>
+        <Grid item xs={9}>
+          <ShopMain />
+        </Grid>
+      </Grid>
     </div>
   );
 }
