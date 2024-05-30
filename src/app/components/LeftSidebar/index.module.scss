@@ -1,4 +1,9 @@
-﻿.sidebar {
+﻿@import 'styles/_mixins.scss';
+
+.sidebar {
+  box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
+  border-right: 0;
+
   .list {
     list-style: none;
   }

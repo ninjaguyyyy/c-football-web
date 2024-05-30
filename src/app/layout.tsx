@@ -1,3 +1,4 @@
+import AppProvider from 'app/Provider';
 import Footer from 'app/components/Footer';
 import Header from 'app/components/Header';
 import LeftSidebar from 'app/components/LeftSidebar';
@@ -23,18 +24,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={rajdhani.className}>
-        <Header />
+    <AppProvider>
+      <html lang="en">
+        <body className={rajdhani.className}>
+          <Header />
 
-        {/* <LeftSidebar className="fixed bottom-0 top-[60px] left-0 w-[160px] bg-white text-gray" /> */}
-        <Test className="mt-[80px] w-[160px]" />
+          {/* <LeftSidebar className="fixed bottom-0 top-[60px] left-0 w-[160px] bg-white text-gray" /> */}
+          <Test className="mt-[80px] w-[160px]" />
 
-        <main className="ml-[220px] text-dark flex min-h-screen flex-col items-center justify-between px-24 py-28">
-          {children}
-        </main>
-        <Footer className="ml-[220px]" />
-      </body>
-    </html>
+          <main className="ml-[220px] text-dark flex min-h-screen flex-col items-center justify-between px-24 py-28">
+            {children}
+          </main>
+          <Footer className="ml-[220px]" />
+        </body>
+      </html>
+    </AppProvider>
   );
 }

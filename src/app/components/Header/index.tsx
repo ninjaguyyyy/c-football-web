@@ -1,9 +1,9 @@
 ﻿import Logo from 'app/components/Logo';
-import Image from 'next/image';
 import Link from 'next/link';
 import { HiOutlineSquares2X2 } from 'react-icons/hi2';
 
 export default function Header() {
+  console.log('🚀 ~ Header ~ Header:', 1);
   return (
     <header
       className={`fixed left-0 right-0 bg-purple h-[80px] px-6 text-white flex items-center z-10`}
