@@ -3,10 +3,9 @@ import Link from 'next/link';
 import { HiOutlineSquares2X2 } from 'react-icons/hi2';
 
 export default function Header() {
-  console.log('🚀 ~ Header ~ Header:', 1);
   return (
     <header
-      className={`fixed left-0 right-0 bg-purple h-[80px] px-6 text-white flex items-center z-10`}
+      className={`fixed left-0 right-0 bg-purple h-[80px] px-6 text-white flex items-center z-30`}
     >
       <Logo width={40} />
       {/* <InputField
@@ -21,7 +20,7 @@ export default function Header() {
           <Link href="" className="text-white font-bold block">
             <span>Home</span>
           </Link>
-          <Link href="" className="text-white font-bold block">
+          <Link href="/blog" className="text-white font-bold block">
             Blog
           </Link>
           <Link href="" className="text-white font-bold block">

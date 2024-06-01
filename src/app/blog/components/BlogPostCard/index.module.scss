@@ -1,0 +1,11 @@
+﻿@import 'styles/_mixins.scss';
+
+.container {
+  @include section-default;
+
+  .title-area {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 3px 5px 40px 0 rgba(94, 92, 154, 0.1);
+  }
+}
