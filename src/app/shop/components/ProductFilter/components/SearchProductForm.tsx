@@ -1,8 +1,9 @@
 ﻿'use client';
-import { Button } from '@mui/material';
 import TextInputField from 'app/components/Form/TextInputField';
 import { SearchProductFormData } from 'app/shop/components/ProductFilter/components/SearchProductForm.type';
 import { useForm } from 'react-hook-form';
+import IconButton from '@mui/material/IconButton';
+import { HiOutlineMagnifyingGlass } from 'react-icons/hi2';
 
 export default function SearchProductForm() {
   const {
@@ -21,7 +22,9 @@ export default function SearchProductForm() {
         control={control}
         className="w-[300px]"
       />
-      <Button>Search</Button>
+      <IconButton className={'w-[50px] h-[50px] rounded-[10px]'}>
+        <HiOutlineMagnifyingGlass />
+      </IconButton>
     </form>
   );
 }

@@ -1,8 +1,27 @@
-﻿.container {
+﻿@import 'styles/_variables.scss';
+
+.container {
   :global {
-    .ant-input {
-      padding-top: 10px;
-      padding-bottom: 20px;
+    fieldset {
+      border-color: $gray-1-color !important;
+    }
+
+    .Mui-focused fieldset {
+      border-width: 1px !important;
+      border-color: $purple-1-color !important;
+    }
+
+    .MuiInputBase-root.MuiOutlinedInput-root {
+      border-radius: 20px;
+    }
+
+    .MuiInputBase-input.MuiOutlinedInput-input {
+      padding: 12px 18px !important;
+    }
+
+    .MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl {
+      font-size: 13px;
+      line-height: normal;
     }
   }
 }
