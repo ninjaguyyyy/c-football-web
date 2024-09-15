@@ -6,6 +6,10 @@ import Test from 'app/components/LeftSidebar/Test';
 import type { Metadata } from 'next';
 import { Rajdhani } from 'next/font/google';
 import 'styles/global.scss';
+import { ThemeProvider } from '@mui/material/styles';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import theme from '../styles/mui-theme';
+import { CssBaseline } from '@mui/material';
 
 const rajdhani = Rajdhani({
   weight: ['300', '400', '500', '600', '700'],
@@ -27,15 +31,19 @@ export default function RootLayout({
     <AppProvider>
       <html lang="en">
         <body className={rajdhani.className}>
-          <Header />
+          <AppRouterCacheProvider>
+            <ThemeProvider theme={theme}>
+              <Header />
 
-          {/* <LeftSidebar className="fixed bottom-0 top-[60px] left-0 w-[160px] bg-white text-gray" /> */}
-          <Test className="mt-[80px] w-[160px]" />
+              {/* <LeftSidebar className="fixed bottom-0 top-[60px] left-0 w-[160px] bg-white text-gray" /> */}
+              <Test className="mt-[80px] w-[160px]" />
 
-          <main className="ml-[220px] text-dark flex min-h-screen flex-col items-center justify-between px-24 py-28">
-            {children}
-          </main>
-          <Footer className="ml-[220px]" />
+              <main className="ml-[220px] text-dark flex min-h-screen flex-col items-center justify-between px-24 py-28">
+                {children}
+              </main>
+              <Footer className="ml-[220px] px-24 py-2" />
+            </ThemeProvider>
+          </AppRouterCacheProvider>
         </body>
       </html>
     </AppProvider>

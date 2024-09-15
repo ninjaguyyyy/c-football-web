@@ -1,0 +1,14 @@
+@import 'styles/_mixins.scss';
+
+.container {
+  @include section-default;
+  padding: 32px;
+  height: 100%;
+  box-sizing: border-box;
+
+  :global {
+    .add-cart-btn {
+      box-shadow: 4px 7px 12px 0 rgba(35, 210, 226, .2)
+    }
+  }
+}

@@ -8,7 +8,6 @@ type Props = {
 export default function ProductFilter({ className }: Props) {
   return (
     <section className={`${className} ${styles.container} px-6 py-4`}>
-      Product Filter
       <SearchProductForm />
     </section>
   );

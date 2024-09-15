@@ -12,7 +12,7 @@
     }
 
     .MuiInputBase-root.MuiOutlinedInput-root {
-      border-radius: 20px;
+      border-radius: 12px;
     }
 
     .MuiInputBase-input.MuiOutlinedInput-input {
@@ -20,8 +20,9 @@
     }
 
     .MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl {
-      font-size: 13px;
+      font-size: 14px;
       line-height: normal;
+      font-weight: 500;
     }
   }
 }

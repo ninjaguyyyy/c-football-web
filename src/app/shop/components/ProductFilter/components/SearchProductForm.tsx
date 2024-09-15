@@ -15,15 +15,19 @@ export default function SearchProductForm() {
   } = useForm<SearchProductFormData>({});
 
   return (
-    <form className="flex">
+    <form className="flex gap-3">
       <TextInputField
         label="Search Products"
         name="keyword"
         control={control}
         className="w-[300px]"
       />
-      <IconButton className={'w-[50px] h-[50px] rounded-[10px]'}>
-        <HiOutlineMagnifyingGlass />
+      <IconButton
+        className={
+          'w-[64px] h-[48px] !rounded-[10px] !bg-lightblue hover:bg-lightblue !text-white'
+        }
+      >
+        <HiOutlineMagnifyingGlass className={'stroke-2'} />
       </IconButton>
     </form>
   );
