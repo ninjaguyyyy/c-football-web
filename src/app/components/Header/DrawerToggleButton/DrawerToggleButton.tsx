@@ -2,10 +2,16 @@
 
 import { HiMiniBars3BottomLeft } from 'react-icons/hi2';
 import IconButton from '@mui/material/IconButton';
+import { useSetAtom } from 'jotai/react';
+import { rootLayoutAtom } from '../../../../stores/layout/state';
 
 export function DrawerToggleButton() {
+  const setRootLayout = useSetAtom(rootLayoutAtom);
+
   function handleToggleDrawer() {
-    console.log('toggle');
+    setRootLayout({
+      openDrawer: true,
+    });
   }
 
   return (

@@ -6,6 +6,7 @@ import {
   GiGamepad,
   GiHighKick,
 } from 'react-icons/gi';
+import { HiOutlineBuildingStorefront } from 'react-icons/hi2';
 
 export interface SidebarItem {
   icon: IconType;
@@ -28,7 +29,12 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
     activePathname: '/teams',
     link: '/teams',
   },
-  { icon: GiShop, label: 'Shop', activePathname: '/shop', link: '/shop' },
+  {
+    icon: HiOutlineBuildingStorefront,
+    label: 'Shop',
+    activePathname: '/shop',
+    link: '/shop',
+  },
 ];
 
 export const PROFILE_NAVIGATOR_ITEMS: ProfileNavigatorItem[] = [

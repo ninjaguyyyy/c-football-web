@@ -17,10 +17,10 @@ export default function SidebarItemComp({ item }: Props) {
       passHref
       className={`${
         isActive ? 'active' : ''
-      } px-3 py-2 rounded-xl flex items-center gap-4 w-full bg-white cursor-pointer`}
+      } px-3 py-3 rounded-xl flex items-center gap-4 w-full bg-white cursor-pointer`}
     >
       <item.icon className="text-2xl text-gray" />
-      <span className="font-bold text-dark">{item.label}</span>
+      <span className="font-bold text-dark text-sm">{item.label}</span>
     </Link>
   );
 }

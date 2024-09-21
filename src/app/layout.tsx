@@ -1,6 +1,5 @@
 import AppProvider from 'app/Provider';
 import Footer from 'app/components/Footer';
-import Test from 'app/components/LeftSidebar/Test';
 import type { Metadata } from 'next';
 import { Rajdhani } from 'next/font/google';
 import 'styles/global.scss';
@@ -9,7 +8,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import theme from '../styles/mui-theme';
 import React from 'react';
 import { Header } from './components/Header';
-import LeftSidebar from './components/LeftSidebar';
+import { LeftSidebar } from './components/LeftSidebar';
 
 const rajdhani = Rajdhani({
   weight: ['300', '400', '500', '600', '700'],
