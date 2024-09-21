@@ -3,19 +3,43 @@
 import { SIDEBAR_ITEMS } from 'constants/menu';
 import styles from './index.module.scss';
 import SidebarItemComp from 'app/components/LeftSidebar/SidebarItem';
+import { Box, Drawer } from '@mui/material';
+import { useState } from 'react';
+import { SidebarList } from './SidebarList';
 
 type Props = {
   className?: string;
 };
 
 export default function LeftSidebar({ className }: Props) {
+  const [open, setOpen] = useState<boolean>(true); // use global state
+
+  function handleCloseDrawer() {
+    setOpen(false);
+  }
+
   return (
-    <ul
-      className={`${className} ${styles.sidebar} container flex flex-col items-center h-full gap-4 py-6 px-6`}
-    >
-      {SIDEBAR_ITEMS.map((item) => {
-        return <SidebarItemComp item={item} key={item.label} />;
-      })}
-    </ul>
+    <Box component="nav" aria-label="mailbox folders">
+      <Drawer
+        variant="temporary"
+        open={open}
+        onClose={handleCloseDrawer}
+        ModalProps={{
+          keepMounted: true,
+        }}
+      >
+        <SidebarList />
+      </Drawer>
+      {/*<Drawer*/}
+      {/*  variant="permanent"*/}
+      {/*  sx={{*/}
+      {/*    display: { xs: 'none', sm: 'block' },*/}
+      {/*    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },*/}
+      {/*  }}*/}
+      {/*  open*/}
+      {/*>*/}
+      {/*  {drawer}*/}
+      {/*</Drawer>*/}
+    </Box>
   );
 }

@@ -1,7 +1,5 @@
 import AppProvider from 'app/Provider';
 import Footer from 'app/components/Footer';
-import Header from 'app/components/Header';
-import LeftSidebar from 'app/components/LeftSidebar';
 import Test from 'app/components/LeftSidebar/Test';
 import type { Metadata } from 'next';
 import { Rajdhani } from 'next/font/google';
@@ -9,7 +7,9 @@ import 'styles/global.scss';
 import { ThemeProvider } from '@mui/material/styles';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import theme from '../styles/mui-theme';
-import { CssBaseline } from '@mui/material';
+import React from 'react';
+import { Header } from './components/Header';
+import LeftSidebar from './components/LeftSidebar';
 
 const rajdhani = Rajdhani({
   weight: ['300', '400', '500', '600', '700'],
@@ -36,7 +36,8 @@ export default function RootLayout({
               <Header />
 
               {/* <LeftSidebar className="fixed bottom-0 top-[60px] left-0 w-[160px] bg-white text-gray" /> */}
-              <Test className="mt-[80px] w-[160px]" />
+              {/*<Test className="mt-[80px] w-[160px]" />*/}
+              <LeftSidebar />
 
               <main className="ml-[220px] text-dark flex min-h-screen flex-col items-center justify-between px-24 py-28">
                 {children}
