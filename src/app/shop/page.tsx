@@ -1,9 +1,7 @@
 ﻿import { Grid } from '@mui/material';
-import Banner from 'app/components/Banner';
 import ProductFilter from 'app/shop/components/ProductFilter';
 import ShopMain from 'app/shop/components/ShopMain';
 import ShopSidebar from 'app/shop/components/ShopSidebar';
-import StoreImage from 'statics/images/marketplace-icon.webp';
 
 export default async function Shop() {
   return (
@@ -11,10 +9,10 @@ export default async function Shop() {
       <ProductFilter className="mt-8 mb-4" />
 
       <Grid container spacing={2} className="">
-        <Grid item xs={3}>
+        <Grid item xs={12} sm={3} className={'hidden sm:block'}>
           <ShopSidebar />
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={12} sm={9}>
           <ShopMain />
         </Grid>
       </Grid>

@@ -1,7 +1,7 @@
 ﻿import { Grid } from '@mui/material';
 import BlogPostCard from 'app/blog/components/BlogPostCard';
-import Banner from 'app/components/Banner';
 import BlogImage from 'statics/images/blog-icon.webp';
+import { Banner } from '../components/Banner';
 
 export default function Blog() {
   return (

@@ -9,6 +9,7 @@ import theme from '../styles/mui-theme';
 import React from 'react';
 import { Header } from './components/Header';
 import { LeftSidebar } from './components/LeftSidebar';
+import classes from './layout.module.scss';
 
 const rajdhani = Rajdhani({
   weight: ['300', '400', '500', '600', '700'],
@@ -34,13 +35,9 @@ export default function RootLayout({
             <ThemeProvider theme={theme}>
               <Header />
 
-              {/* <LeftSidebar className="fixed bottom-0 top-[60px] left-0 w-[160px] bg-white text-gray" /> */}
-              {/*<Test className="mt-[80px] w-[160px]" />*/}
               <LeftSidebar />
 
-              <main className="ml-[220px] text-dark flex min-h-screen flex-col items-center justify-between px-24 py-28">
-                {children}
-              </main>
+              <main className={classes.main}>{children}</main>
               <Footer className="ml-[220px] px-24 py-2" />
             </ThemeProvider>
           </AppRouterCacheProvider>

@@ -1,7 +1,7 @@
 'use client';
 
 import StoreImage from '../../statics/images/marketplace-icon.webp';
-import Banner from '../components/Banner';
+import { Banner } from '../components/Banner';
 
 export default function Layout({ children, params }: any) {
   return (

@@ -1,0 +1,33 @@
+﻿@import 'styles/_mixins.scss';
+
+.container {
+  box-shadow: 0 0 40px 0 rgba(94,92,154,.06) !important;
+  border-radius: 12px !important;
+
+  :global {
+    .price {
+      box-shadow: 3px 5px 20px 0 rgba(94,92,154,.12);
+      background: white;
+      padding: 0 14px;
+      height: 32px;
+      border-radius: 200px;
+      margin: 0;
+      font-weight: bold;
+      line-height: 32px;
+
+      @apply text-[0.85rem] sm:text-[0.975rem] absolute top-[-20px] right-[5px] sm:right-[20px];
+    }
+
+    .content-wrapper {
+      @apply py-[16px] sm:py-[24px] px-[24px] relative #{!important};
+    }
+
+    .title {
+      @apply text-base sm:text-[18px] font-bold text-dark my-0;
+    }
+
+    .sub-title {
+      @apply text-gray-4 font-medium text-xs sm:text-[14px] mt-[8px] sm:mt-[16px] #{!important};
+    }
+  }
+}
