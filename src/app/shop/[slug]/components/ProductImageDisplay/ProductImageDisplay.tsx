@@ -90,7 +90,7 @@ export function ProductImageDisplay({ productImages }: Props) {
         {productImages?.map((e, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="h-[110px] relative cursor-pointer">
+              <div className="h-[80px] sm:h-[110px] relative cursor-pointer">
                 <Image
                   className="rounded-md object-cover"
                   src={e.link}

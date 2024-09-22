@@ -24,9 +24,9 @@ export function Banner({ image, title, subTitle }: Props) {
       />
       <Image src={image} alt="shop" className="h-full w-auto" />
 
-      <div className="ml-3 pt-1 text-white pr-4">
-        <p className="font-bold text-2xl sm:text-3xl !mt-2">{title}</p>
-        <p className="mt-0 font-medium text-xs sm:text-base">{subTitle}</p>
+      <div className="ml-3 pt-1 text-white pr-6">
+        <p className="font-bold text-2xl sm:text-3xl !mt-2 mb-0">{title}</p>
+        <p className="!mt-0 font-medium text-xs sm:text-base">{subTitle}</p>
       </div>
     </section>
   );

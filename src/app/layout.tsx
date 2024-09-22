@@ -38,7 +38,7 @@ export default function RootLayout({
               <LeftSidebar />
 
               <main className={classes.main}>{children}</main>
-              <Footer className="ml-[220px] px-24 py-2" />
+              <Footer className="ml-0 sm:ml-[220px] px-4 sm:px-24 py-2" />
             </ThemeProvider>
           </AppRouterCacheProvider>
         </body>

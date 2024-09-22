@@ -4,7 +4,7 @@ import { ProductInfoBadge } from './ProductInfoBadge';
 
 export function ProductInfoBadges() {
   return (
-    <div className={'flex items-center gap-10 my-8'}>
+    <div className={'flex items-center gap-10 my-4 sm:my-8'}>
       <ProductInfoBadge
         icon={<HiOutlineSquare3Stack3D size={26} />}
         title={'Availability'}

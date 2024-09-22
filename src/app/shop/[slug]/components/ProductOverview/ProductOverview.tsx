@@ -11,7 +11,9 @@ type Props = {
 export function ProductOverview({ className }: Props) {
   return (
     <div className={classNames(styles.container, className)}>
-      <p className={'text-[2rem] font-bold mt-0 mb-1'}>Name</p>
+      <p className={'text-[1.75rem] sm:text-[2rem] font-bold mt-0 mb-1'}>
+        Name
+      </p>
       <div className={'flex gap-2 items-center'}>
         <span
           className={
@@ -20,7 +22,7 @@ export function ProductOverview({ className }: Props) {
         ></span>
         <span className={'font-bold'}>Do an</span>
       </div>
-      <p className={'text-3xl font-bold'}>
+      <p className={'text-2xl sm:text-3xl font-bold mt-2 mb-3'}>
         36 <span className={'text-lightblue'}>đ</span>
       </p>
       <p className={'text-[0.875rem] leading-5 font-medium mt-0'}>
@@ -37,7 +39,7 @@ export function ProductOverview({ className }: Props) {
       <Button
         variant="contained"
         className={
-          'add-cart-btn !bg-lightblue !shadow-none w-[200px] !mt-8 h-[48px] !normal-case !font-bold !text-[1rem] !rounded-[10px]'
+          'add-cart-btn !bg-lightblue !shadow-none w-full sm:w-[200px] !mt-8 h-[48px] !normal-case !font-bold !text-[1rem] !rounded-[10px]'
         }
       >
         Add to Your Cart!

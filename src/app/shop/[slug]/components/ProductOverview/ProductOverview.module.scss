@@ -2,9 +2,7 @@
 
 .container {
   @include section-default;
-  padding: 32px;
-  height: 100%;
-  box-sizing: border-box;
+  @apply px-8 py-4 sm:py-8 h-full box-border;
 
   :global {
     .add-cart-btn {
