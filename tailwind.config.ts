@@ -36,6 +36,8 @@ const config: Config = {
         lightblue: '#23d2e2',
 
         dark: '#3e3f5e',
+
+        blue: '#00c7d9',
       },
     },
   },

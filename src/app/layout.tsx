@@ -1,4 +1,3 @@
-import AppProvider from 'app/Provider';
 import Footer from 'app/components/Footer';
 import type { Metadata } from 'next';
 import { Rajdhani } from 'next/font/google';
@@ -28,21 +27,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <AppProvider>
-      <html lang="en">
-        <body className={rajdhani.className}>
-          <AppRouterCacheProvider>
-            <ThemeProvider theme={theme}>
-              <Header />
+    <html lang="en">
+      <body className={rajdhani.className}>
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>
+            <Header />
 
-              <LeftSidebar />
+            <LeftSidebar />
 
-              <main className={classes.main}>{children}</main>
-              <Footer className="ml-0 sm:ml-[220px] px-4 sm:px-24 py-2" />
-            </ThemeProvider>
-          </AppRouterCacheProvider>
-        </body>
-      </html>
-    </AppProvider>
+            <main className={classes.main}>{children}</main>
+            <Footer className="ml-0 sm:ml-[220px] px-4 sm:px-24 py-2" />
+          </ThemeProvider>
+        </AppRouterCacheProvider>
+      </body>
+    </html>
   );
 }

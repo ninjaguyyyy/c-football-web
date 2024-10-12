@@ -15,7 +15,9 @@ type Props = {
 };
 
 export function ProductImageDisplay({ productImages }: Props) {
-  const [mainImageSrc, setMainImageSrc] = useState('');
+  const [mainImageSrc, setMainImageSrc] = useState<string | StaticImageData>(
+    ''
+  );
 
   useEffect(() => {
     productImages?.length && setMainImageSrc(productImages[0].link);

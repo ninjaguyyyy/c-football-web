@@ -19,7 +19,7 @@
     }
 
     .content-wrapper {
-      @apply py-[16px] sm:py-[24px] px-[24px] relative #{!important};
+      @apply py-[16px] sm:py-[24px] px-[16px] sm:px-[24px] relative #{!important};
     }
 
     .title {
